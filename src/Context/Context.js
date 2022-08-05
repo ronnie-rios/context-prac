@@ -1,4 +1,5 @@
-import { createContext } from "react"
+import { createContext, useReducer } from "react";
+import productReducer from "./Reducer";
 
 const ProductContext = createContext()
 
@@ -14,9 +15,8 @@ const data = [
 export const ProductProvider = ({ children }) => {
     const initialState = {
         cart: [],
-        Products: data
+        products: data
     }
-
 
     const [state, dispatch] = useReducer(productReducer, initialState);
 
