@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-import productReducer from "./Reducer";
+import { productReducer, ADD_PRODUCT } from "./Reducer";
 
 const ProductContext = createContext()
 
@@ -11,11 +11,13 @@ const data = [
     { id: 5, name: "luxury bed", desc: "comfy bed", price: 50 }
 ]
 
+
 //create the provider
 export const ProductProvider = ({ children }) => {
     const initialState = {
         cart: [],
-        products: data
+        products: data,
+        
     }
 
     const [state, dispatch] = useReducer(productReducer, initialState);
