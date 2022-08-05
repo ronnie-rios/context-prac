@@ -6,7 +6,7 @@ export default function Cart() {
 
   return (
     <div>
-        <h2>checkout</h2>
+        <h2>cart</h2>
         {cart.map((items) => (
             <div>
                 <h4>{items.name}</h4>

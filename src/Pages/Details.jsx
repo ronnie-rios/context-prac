@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import ProductContext from '../Context/Context';
 import { useParams, useNavigate } from 'react-router-dom';
+import HomeButton from '../Components/HomeButton';
 
 export default function Details() {
   const { products, cart, dispatch } = useContext(ProductContext);
@@ -20,6 +21,7 @@ export default function Details() {
         <p>Desc: {products[+id-1].desc}</p>
         <p>Price: ${products[+id-1].price}</p>
         <button onClick={addToCart}>add to cart</button>
+        <HomeButton />
       </div>
       <button onClick={() => navigate('/checkout')}>checkout</button>
     </>

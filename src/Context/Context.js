@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-
+import productReducer from './Reducer'
 const ProductContext = createContext()
 
 const data = [
